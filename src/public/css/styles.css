@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fontfam: 'Roboto', sans-serif;
+
+    /* paleta de colores */
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --grisoscuro: #666;
+    --grisclaro: #ebebeb;
+    --verde: #39b54a;
+}
+body {
+    font-family: var(--fontfam);
+    font-size: 12px;
+    background-color: var(--grisclaro);
+}
+
+header {
+    background-color: var(--amarillo);
+    padding: 20px;
+}
+footer {
+    background-color: white;
+}
+footer p {
+    font-size: 16px; /* Tamaño para descripciones en el footer */
+}
+/* -----------header--------------- */
+/* .hdr-contenedor{
+
+} */
+.logo {
+    width: 250px;
+    max-width: 100%;
+}
+.hdr-texto {
+    text-align: center;
+    margin: 10px;
+    font-size: 16px;
+}
+.navBar a,
+.loginBar a {
+    text-decoration: none;
+    color: black;
+}
+
+.navBar,
+.loginBar {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.searchBar {
+    width: 100%;
+}
+.searchBar-logo , .searchBar-form{
+    width: 50%;
+}
+.burger-menuBar {
+    display: flex;
+    justify-content: center;
+}
+
+.burger-menu {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    background-color: var(--celeste);
+    /* Fondo azul */
+    border-radius: 5px;
+    width: 40px;
+    /* Ancho del div */
+    height: 40px;
+    /* Alto del div */
+
+}
+
+.burger-menu i {
+    margin: 11px;
+    color: #fff;
+    /* Ícono en color blanco */
+    font-size: 20px;
+    /* Tamaño del ícono */
+}
+
+
+@media (min-width: 361px) {
+    /* Navegación en tablets (ancho mínimo 361 px) */
+
+    /* Box shadow para tablets y resoluciones superiores */
+   
+    .navBar, .loginBar {
+        display: block;
+    }
+    .burger-menuBar{
+        display: none;
+    }
+    .navBar, .loginBar {
+        display: flex;
+        justify-content: space-between;  /* Ajusta el espacio entre navBar y loginBar */
+    }
+   
+}
+
+@media (min-width: 769px) {
+    /* Navegación en desktop (ancho mínimo 769 px */
+
+    /* Si solo en el caso mobile la descripción del artículo no se visualizará */
+   
+    .hdr-contenedor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+        margin-bottom: 20px;
+    }
+    .navBar ul{
+        display: flex;
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    }
+     .loginBar ul{
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        padding: 0;
+        margin: 0;
+    }
+    .burger-menuBar{
+        display: none;
+    }
+    .searchBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    /* Media Query para dispositivos móviles (ancho máximo de 768px) */
+
+    /* Ocultar la descripción del artículo en dispositivos móviles */
+    .navBar, .loginBar {
+        display: none;
+    }
+    .burger-menuBar{
+        display: block;
+    }
+    .searchBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   
+}
+/* ---------------fin header --------- */
+
+/* ---------------main------------------ */
+
+.divMain {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.divTituloSeccion {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: center; /* Opcional, para centrar el título */
+}
+.titulares {
+    font-size: 24px;
+    color: var(--grisoscuro);
+}
+.productos, .ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
+}
+
+.producto img {
+    max-width: 100%; /* Ajusta el tamaño máximo de las imágenes al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de aspecto de las imágenes */
+
+}
+
+/* .envio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.info > .envio{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    color: var(--verde);
+
+    }
+    .info {
+        position: relative;
+        }
+        
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px var(--grisclaro);
+}
+
+.precios {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.precio {
+    flex: 30%; /* Precio ocupa el 30% */
+    margin: 5px;
+    font-size: 18px;
+}
+.descuento{
+    flex: 70%; /* Descuento ocupa el 70% */
+    text-align: left; /* Alineación del descuento a la izquierda */
+    margin: 5px;
+    font-size: 16px;
+    color: var(--verde);
+}
+/* .precio, .descuento {
+    flex: 1;
+} */
+.producto .iconoEnvio{
+    transition: transform 0.8s ease;
+
+}
+.producto:hover {
+    box-shadow: 0px 0px 15px rgb(100, 100, 100); /* Cambia  la sombra al pasar el mouse */
+}
+
+.producto:hover .iconoEnvio {
+    transform: rotate(-90deg);
+} 
+
+.descripcion {
+    font-size: 16px;
+    opacity: 0; /* Inicialmente, la descripción es invisible */
+    transition: opacity 0.3s ease; /* Agregamos transición para suavizar la opacidad */
+}
+
+.producto:hover .descripcion {
+    opacity: 1; /* Mostramos la descripción al pasar el mouse */
+}
+@media screen and (max-width: 360px) {
+    .descripcion {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 361px) and (max-width: 768px) {
+    .producto {
+        width: 45%; /* Ajusta el ancho de los productos en tablets */
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .productos, .ofertas {
+        justify-content: space-between; /* Alinea las secciones en fila en escritorio */
+    }
+
+    .producto {
+        width: 22%; /* Ajusta el ancho de los productos en escritorio */
+    }
+}
+/* --------------- fin main------------------ */
+/* --------------footer------------- */
+.divFooter-contenedor{
+    margin-top: 15px;
+    padding: 30px;
+}
+.divFooter {
+    text-align: center;
+    color: var(--grisoscuro);
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.divFooter .iconFooter {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: var(--celeste);
+}
+
+.iconFooter:hover {
+    color: var(--verde);
+}
+
+.iconFooter p {
+    text-align: center;
+}
+
+@media screen and (min-width: 968px) {
+    .divFooter-contenedor{
+        display: flex;
+    }
+}
+/* ----------------fin footer------------------- */
+
+  
